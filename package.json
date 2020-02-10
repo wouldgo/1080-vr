@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-360/scripts/packager.js",
     "bundle": "node node_modules/react-360/scripts/bundle.js",
-    "deploy": "rm -Rf build && npm run bundle && cp -Rfv static_assets build/static_assets && gh-pages -d build",
+    "deploy": "rm -Rf build && npm run bundle && cp -Rfv static_assets build/static_assets && gh-pages -d build && rm -Rf build",
     "open": "node -e \"require('xopen')('http://localhost:8081/index.html')\"",
     "devtools": "react-devtools",
     "test": "jest"

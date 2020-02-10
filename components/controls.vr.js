@@ -55,8 +55,8 @@ export default class VideoControls extends React.Component {
               {
                 'translate': [
                   0,
-                  9,
-                  -4
+                  2,
+                  1.5
                 ]
               }
             ]
@@ -78,9 +78,9 @@ export default class VideoControls extends React.Component {
             }}
             style={{
               'transform': [
-                {'scaleX': 0.003},
-                {'scaleY': 0.003},
-                {'scaleZ': 0.003}
+                {'scaleX': 0.004},
+                {'scaleY': 0.004},
+                {'scaleZ': 0.004}
               ]
             }}
           />
