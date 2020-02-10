@@ -1,0 +1,9 @@
+{
+  "ecmaVersion": 8,
+  "libs": [],
+  "loadEagerly": [],
+  "dontLoad": [],
+  "plugins": {
+    "doc_comment": true
+  }
+}
