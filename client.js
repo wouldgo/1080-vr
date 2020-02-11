@@ -1,8 +1,8 @@
 import {ReactInstance, Surface, Location} from 'react-360-web';
 import WebVRPolyfill from 'webvr-polyfill';
-const polyfill = new WebVRPolyfill();
 
-const rotate = (v, q) => {
+const polyfill = new WebVRPolyfill()
+, rotate = (v, q) => {
   const qx = q[0]
     , qy = q[1]
     , qz = q[2]
@@ -50,11 +50,11 @@ const rotate = (v, q) => {
 , init = (bundle, parent, options = {}) => {
   let oldRotation = [];
   const shellSurface = new Surface(1100, 600, Surface.SurfaceShape.Cylinder)
-    , controlsLocation = new Location([0, -0.5, -2])
+    , controlsLocation = new Location([0, -0.9, -2.5])
     , calculateControlsLocation = newRotation => {
       const multiplier = 2
         , newX = newRotation[0] * multiplier
-        , newY = newRotation[1] * multiplier - 0.5
+        , newY = newRotation[1] * multiplier - 0.9
         , newZ = newRotation[2] * multiplier;
 
       return [
