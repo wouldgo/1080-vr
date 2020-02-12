@@ -22,7 +22,7 @@ var config = {
   },
 
   getProvidesModuleNodeModules() {
-    return ['react-native', 'react-360'];
+    return ['react-native', 'react-360', 'redux', 'react-redux'];
   },
 };
 

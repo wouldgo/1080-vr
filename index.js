@@ -2,8 +2,8 @@ import {
   AppRegistry
 } from 'react-360';
 
-import Shell from './components/shell';
-import VideoControls from './components/controls';
+import ShellRenderer from './renders/shell.vr';
+import ControlsRenderer from './renders/controls.vr';
 
-AppRegistry.registerComponent('Shell', () => Shell);
-AppRegistry.registerComponent('VideoControls', () => VideoControls);
+AppRegistry.registerComponent('Shell', () => ShellRenderer);
+AppRegistry.registerComponent('ControlsRenderer', () => ControlsRenderer);

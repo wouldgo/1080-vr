@@ -83,13 +83,13 @@ const polyfill = new WebVRPolyfill()
       ...options
     });
 
-  //r360.renderToSurface(
-  //  r360.createRoot('Shell'),
-  //  shellSurface
-  //);
+  r360.renderToSurface(
+    r360.createRoot('Shell'),
+    shellSurface
+  );
 
   r360.renderToLocation(
-    r360.createRoot('VideoControls'),
+    r360.createRoot('ControlsRenderer'),
     controlsLocation
   );
 

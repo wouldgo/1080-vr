@@ -2,43 +2,17 @@ import React from 'react';
 import {
   View,
   VrButton,
-  Environment,
-  asset,
-  staticAssetURL
+  asset
 } from 'react-360';
 import Entity from 'Entity';
 import AmbientLight from 'AmbientLight';
 import PointLight from 'PointLight';
-import VideoModule from 'VideoModule';
 
-const playerSym = Symbol('PLAYER-SYM')
-  , runningSym = Symbol('RUNNING-SYM');
+const scaleValue = 0.004;
 
-export default class VideoControls extends React.Component {
+export default class Controls extends React.Component {
   constructor(props) {
     super(props);
-
-    this[playerSym] = VideoModule.createPlayer('stageVideo');
-    this[runningSym] = false;
-  }
-
-
-  startVideo() {
-    this[playerSym].play({
-      'volume' : 1,
-      'muted' : false,
-      'source': {
-        'url': staticAssetURL('video/palco.mp4')
-      }
-    });
-
-    Environment.setBackgroundVideo('stageVideo');
-  }
-
-  stopVideo() {
-
-    this[playerSym].pause();
-    Environment.setBackgroundVideo(null);
   }
 
   render() {
@@ -61,26 +35,16 @@ export default class VideoControls extends React.Component {
               }
             ]
           }}/>
-        <VrButton onClick={() => {
-            if (!this[runningSym]) {
-
-              this.startVideo()
-            } else {
-
-              this.stopVideo();
-            }
-
-            this[runningSym] = !this[runningSym];
-          }}>
+        <VrButton onClick={() => { this.props.toggleVideo() }}>
           <Entity
             source={{
               'gltf2': asset('3d/play-button/model.gltf')
             }}
             style={{
               'transform': [
-                {'scaleX': 0.004},
-                {'scaleY': 0.004},
-                {'scaleZ': 0.004}
+                {'scaleX': scaleValue},
+                {'scaleY': scaleValue},
+                {'scaleZ': scaleValue}
               ]
             }}
           />

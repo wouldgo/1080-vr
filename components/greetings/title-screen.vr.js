@@ -5,7 +5,7 @@ import {
   View
 } from 'react-360';
 
-import {fonts, borders} from './styles';
+import {fonts} from '../styles';
 
 const titleRow = fontSize => ({
     fontSize,
