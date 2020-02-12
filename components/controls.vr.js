@@ -45,18 +45,18 @@ export default class VideoControls extends React.Component {
     return (
       <View>
         <AmbientLight
-          intesity={0.1}
-          color={'#f0f'}/>
+          intesity={0.01}
+          color={'#fff'}/>
         <PointLight
           intesity={1.0}
-          color={'#0f0'}
+          color={'#fff'}
           style={{
             'transform': [
               {
                 'translate': [
                   0,
                   2,
-                  1.5
+                  3
                 ]
               }
             ]
